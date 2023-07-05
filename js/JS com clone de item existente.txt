@@ -1,0 +1,47 @@
+$(document).ready(function() {
+    // Este bloco de código é executado quando o documento HTML é carregado e pronto para manipulação
+  
+    $('header button').click(function() {
+      $('form').slideDown();
+    });
+  
+    // Quando o botão dentro do elemento header é clicado, este evento é acionado.
+    // Ele desliza o formulário para baixo, exibindo-o usando o método slideDown() do jQuery.
+  
+    $('#cancel').click(function() {
+      $('form').slideUp();
+    });
+  
+    // Quando o botão com o id "cancel" é clicado, este evento é acionado.
+    // Ele desliza o formulário para cima, ocultando-o usando o método slideUp() do jQuery.
+  
+    $('form').on('submit', function(e) {
+      e.preventDefault();
+  
+      // Este bloco de código é acionado quando o formulário é submetido
+  
+      var imageUrl = $('input[type="url"]').val();
+      // Captura o valor do campo de input do tipo "url" que contém a URL da imagem digitada
+  
+      var listItem = $('ul li').first().clone();
+      // Clona o primeiro item da lista (<li>) utilizando o método clone() do jQuery
+      // Isso nos permite criar uma cópia do item existente para adicionar a nova imagem
+  
+      listItem.find('img').attr('src', imageUrl);
+      // Atualiza o atributo "src" da tag <img> dentro do item clonado com a URL da imagem digitada
+  
+      listItem.find('.overlay-img-link a').attr('href', imageUrl);
+      // Atualiza o atributo "href" do link (<a>) dentro da div com a classe "overlay-img-link"
+      // Também com a URL da imagem digitada
+  
+      $('ul').prepend(listItem);
+      // Adiciona o item clonado, com as atualizações feitas, ao final da lista (<ul>) existente
+  
+      $('input[type="url"]').val('');
+      // Limpa o campo de input, definindo seu valor como vazio
+      /*  
+      $('form').slideUp();
+      // Desliza o formulário para cima, ocultando-o novamente */
+    });
+  });
+  

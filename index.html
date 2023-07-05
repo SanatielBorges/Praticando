@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserindo Imagens com jQuery</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>imagens dos super-heróis mais amados</h1>
+
+        <button type="button">nova imagem +</button>
+    </header>
+
+    <form>
+        <h2>inserir nova imagem</h2>
+        <input type="url" required placeholder="url da imagem" />
+
+        <button type="submit">adicionar</button>
+        <button type="reset" id="cancel">cancelar</button>
+    </form>
+
+    <ul>
+
+        <li>
+            <img src="./img/goku.jpg" alt="goku de dragon ball z" />
+            <div class="overlay-img-link">
+                <a href="./img/goku.jpg" title="goku de dragon ball z" target="_blank">
+                    ver imagem em tamanho real
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <img src="./img/tobey-maguire.jpg.webp" alt="imagem do homem-aranha" />
+            <div class="overlay-img-link">
+                <a href="./img/tobey-maguire.jpg.webp" title="homem aranha" target="_blank">
+                    ver imagem em tamanho real
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <img src="./img/capitao-america.jpg" alt="imagem do capitão america" />
+            <div class="overlay-img-link">
+                <a href="./img/capitao-america.jpg" title="Capitão América" target="_blank">
+                    ver imagem em tamanho real
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <img src="./img/vegeta.jpg" alt="imagem do vegeta de dragon ball z" />
+            <div class="overlay-img-link">
+                <a href="./img/vegeta.jpg" title="Vegeta principe dos sayjins" target="_blank">
+                    ver imagem em tamanho real
+                </a>
+            </div>
+        </li>
+
+         <li>
+            <img src="./img/homem-de-ferro.jpg" alt="imagem do homem de ferro" />
+            <div class="overlay-img-link">
+                <a href="./img/homem-de-ferro.jpg" title="Tony Stark - O homem de ferro" target="_blank">
+                    ver imagem em tamanho real
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <img src="./img/shun-andromeda.jpg" alt="imagem do homem de ferro" />
+            <div class="overlay-img-link">
+                <a href="./img/shun-andromeda.jpg" title="Tony Stark - O homem de ferro" target="_blank">
+                    ver imagem em tamanho real
+                </a>
+            </div>
+        </li> 
+        
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
